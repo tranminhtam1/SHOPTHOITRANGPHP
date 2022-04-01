@@ -28,6 +28,8 @@ Route::get('/demo','App\Http\Controllers\ProductController@all_product');
 Route::get('/danh-muc-san-pham/{category_product}','App\Http\Controllers\CategoryProduct@show_category_home');
 //Thuong hieu san pham trang chu
 Route::get('/thuong-hieu-san-pham/{brand_product}','App\Http\Controllers\BrandProduct@show_brand_home');
+Route::get('/chi-tiet-san-pham/{product_id}','App\Http\Controllers\ProductController@details_product');
+
 
 
 //backend
@@ -74,5 +76,12 @@ Route::get('/active-product/{product_id}','App\Http\Controllers\ProductControlle
 Route::post('/save-product','App\Http\Controllers\ProductController@save_product');
 Route::post('/update-product/{brand_product_id}','App\Http\Controllers\ProductController@update_product');
 
+
+
+//cart
+Route::post('/save-cart','App\Http\Controllers\CartController@save_cart');
+Route::get('/show-cart','App\Http\Controllers\CartController@show_cart');
+Route::get('/delete-to-cart/{rowId}','App\Http\Controllers\CartController@delete_to_cart');
+Route::post('/update-cart-quantity','App\Http\Controllers\CartController@update_cart_quantity');
 
 

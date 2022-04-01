@@ -33,7 +33,7 @@ class AdminController extends Controller
     } 
     public function dashboard(Request $request)
     {
-        $admin_email = $request ->admin_email;
+        $admin_email = $request ->admin_email;  
         $admin_password = md5($request ->admin_password);
 
         $result = DB::table('tbl_admin') ->where('admin_email',$admin_email)->where('admin_password',$admin_password) ->first ();
@@ -52,7 +52,7 @@ class AdminController extends Controller
         $this ->AuthLogin();
         Session::put('admin_name',null);
          Session::put('admin_id',null);
-         return Redirect::to('/admin');
+         return Redirect::to('/admin'); 
     }
 
 }

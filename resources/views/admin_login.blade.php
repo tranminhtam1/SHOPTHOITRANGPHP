@@ -40,7 +40,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     ?>
 
         <form action="{{URL::to('/admin-dashboard')}}" method="post">
-            {{csrf_field()}}
+            {{csrf_field()}} 
             <input type="text" class="ggg" name="admin_email" placeholder="E-MAIL" required="">
             <input type="password" class="ggg" name="admin_password" placeholder="PASSWORD" required="">
             <span><input type="checkbox" />Remember Me</span>

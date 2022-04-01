@@ -7,6 +7,7 @@
                         <div class="col-sm-4">
                             <div class="product-image-wrapper">
                                 <div class="single-products">
+                                    <a href="{{URL::to('/chi-tiet-san-pham/'.$product->product_id)}}">
                                         <div class="productinfo text-center">
                                             <img src="{{URL::to('public/upload/product/'.$product->product_image)}}" alt="" />
                                             <h2>{{number_format($product->product_price).' '.'VNĐ'}}</h2>
@@ -23,6 +24,7 @@
                                 </div>
                             </div>
                         </div>
+                    </a>
                         @endforeach
                         </div>
                         
