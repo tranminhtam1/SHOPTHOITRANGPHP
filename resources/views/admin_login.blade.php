@@ -29,7 +29,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 <div class="log-w3">
 <div class="w3layouts-main">
-    <h2>Sign In Now</h2>
+    <h2>Đăng nhập </h2>
     <?php
     $message = Session :: get ('message');
     if($message)
@@ -43,12 +43,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             {{csrf_field()}} 
             <input type="text" class="ggg" name="admin_email" placeholder="E-MAIL" required="">
             <input type="password" class="ggg" name="admin_password" placeholder="PASSWORD" required="">
-            <span><input type="checkbox" />Remember Me</span>
-            <h6><a href="#">Forgot Password?</a></h6>
+            <span><input type="checkbox" />Nhớ tài khoản</span>
+            <h6><a href="#">Quên mật khẩu</a></h6>
                 <div class="clearfix"></div>
                 <input type="submit" value="Sign In" name="login">
         </form>
-        <p>Don't Have an Account ?<a href="registration.html">Create an account</a></p>
+        <p> <a href="registration.html"></a></p>
 </div>
 </div>
 <script src="js/bootstrap.js"></script>

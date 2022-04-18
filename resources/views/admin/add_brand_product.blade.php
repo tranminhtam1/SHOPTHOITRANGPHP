@@ -4,7 +4,7 @@
             <div class="col-lg-12">
                     <section class="panel">
                         <header class="panel-heading">
-                            Them thuong hieu san pham
+                            Thêm thương hiệu sản phẩm 
                         </header>
                         <div class="panel-body">
                             <?php
@@ -20,22 +20,22 @@
                                     {{ csrf_field()}}
                               
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Ten thuong hieu</label>
+                                    <label for="exampleInputPassword1">Tên thương hiệu </label>
                                     <input type="text" name="brand_product_name" class="form-control"  id="exampleInputPassword1" placeholder="Ten danh muc">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Mo ta thuong hieu</label>
+                                    <label for="exampleInputPassword1">Mô tả thương hiệu </label>
                                     <textarea class="form-control" style="resize: none" rows="5" name="brand_product_desc" id="exampleInputPassword1" placeholder="Mo ta danh muc"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputFile">Hien thi thuong hieu </label>
+                                    <label for="exampleInputFile">Hiển thị thương hiệu </label>
                                     <select name="brand_product_status" class="form-control input-sm m-bot15">
-                                        <option value="0">An</option>
-                                         <option value="1">Hien</option>                                       
+                                        <option value="0">Ẩn </option>
+                                         <option value="1">Hiện</option>                                       
                                     </select>
                                 </div>
                                     
-                                <button type="submit" name="add_brand_product" class="btn btn-info" >Them thuong hieu</button>
+                                <button type="submit" name="add_brand_product" class="btn btn-info" >Thêm thương hiệu </button>
                             </form>
                             </div>
 

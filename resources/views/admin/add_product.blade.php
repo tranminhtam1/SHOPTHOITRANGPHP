@@ -20,27 +20,27 @@
                                     {{ csrf_field()}}
                               
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Ten san pham</label>
+                                    <label for="exampleInputPassword1">Tên sản phẩm</label>
                                     <input type="text" name="product_name" class="form-control"  id="exampleInputPassword1" placeholder="Ten danh muc">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Gia</label>
+                                    <label for="exampleInputPassword1">Giá</label>
                                     <input type="text" name="product_price" class="form-control"  id="exampleInputPassword1" placeholder="Gia san pham">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Hinh anh san pham</label>
+                                    <label for="exampleInputPassword1">Hình ảnh sản phẩm</label>
                                     <input type="file" name="product_image" class="form-control"  id="exampleInputPassword1" p>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Mo ta san pham</label>
+                                    <label for="exampleInputPassword1">Mô tả sản phẩm</label>
                                     <textarea class="form-control" style="resize: none" rows="5" name="product_desc" id="exampleInputPassword1" placeholder="Mo ta san pham"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Noi dung san pham</label>
+                                    <label for="exampleInputPassword1">Nội dung sản phẩm</label>
                                     <textarea class="form-control" style="resize: none" rows="5" name="product_content" id="exampleInputPassword1" placeholder="Mo ta noi dung san pham"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputFile">Danh muc san pham  </label>
+                                    <label for="exampleInputFile">Danh mục sản phẩm</label>
                                     <select name="product_cate" class="form-control input-sm m-bot15">
                                         @foreach($cate_product as $key => $cate)
                                         <option value="{{($cate->category_id)}}">{{($cate->category_name)}}</option>
@@ -48,7 +48,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputFile">Thuong hieu san pham </label>
+                                    <label for="exampleInputFile">Thương hiệu sản phẩm</label>
                                     <select name="product_brand" class="form-control input-sm m-bot15">
                                        @foreach($brand_product as $key => $brand)
                                         <option value="{{($brand->brand_id)}}">{{($brand->brand_name)}}</option>
@@ -56,7 +56,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputFile">Hien thi </label>
+                                    <label for="exampleInputFile">Hiển thị  </label>
                                     <select name="product_status" class="form-control input-sm m-bot15">
                                         <option value="0">An</option>
                                          <option value="1">Hien</option>                                       

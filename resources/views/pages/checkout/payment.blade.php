@@ -1,13 +1,22 @@
 @extends('layout')
 @section('content')
 
-<section id="cart_items">
+
+	<section id="cart_items">
 		<div class="container">
 			<div class="breadcrumbs">
 				<ol class="breadcrumb">
-				  <li><a href="{{URL::to('/')}}">Trang chủ </a></li>
-				  <li class="active">Giỏ hàng của bạn </li>
+			  <li><a href="{{URL::to('/')}}">Trang chủ</a></li>
+				  <li class="active">Thanh toán giỏ hàng</li>
 				</ol>
+			</div><!--/breadcrums-->
+
+			<div class="register-req">
+				<p>Làm ơn đăng ký hoặc đăng nhập để thanh toán giỏ hàng và xem lại lịch sử mua hàng</p>
+			</div><!--/register-req-->
+			
+			<div class="review-payment">
+				<h2>Xem lại giỏ hàng </h2>
 			</div>
 			<div class="table-responsive cart_info">
 				<?php
@@ -69,45 +78,28 @@
 				</table>
 
 			</div>
-			<section id="do_action">
-		<div class="container">
-			
-			<div class="row">
-				
-				<div class="col-sm-6">
-					<div class="total_area">
-						<ul>
-							<li>Tổng  <span>
-								{{Cart::priceTotal(0).' '.'vnd'}}
-							</span></li>
-							<li>Thuế <span>{{Cart::tax(0).' '.'vnd'}}</span></li>
-							<li>Phí vận chuyển  <span>Free</span></li>
-							<li>Thành tiền <span>{{Cart::total(0).' '.'vnd'}}</span></li>
-						</ul>
-								<?php
-									$customer_id = Session::get('customer_id');
-									$shipping_id = Session::get('shipping_id');
-									if($customer_id != NULL && $shipping_id==NULL){								
-								?>
-									<li><a href="{{URL::to('/checkout')}}"><i class="fa fa-crosshairs"></i> Thanh toán</a></li>		
-								<?php
-									}elseif($customer_id != NULL && $shipping_id!=NULL){
-									?>
-										<li><a href="{{URL::to('/payment')}}"><i class="fa fa-crosshairs"></i> Thanh toán</a></li>
-										
-									<?php
-									}else{
-										?>
-										<li><a href="{{URL::to('/login-checkout')}}"><i class="fa fa-crosshairs"></i> Thanh toán</a></li>
-										<?php
-									}
-									?>
-					</div>
+
+			<h4 style="margin:40px 0; font-size: 20px;">Chọn hình thức thanh toán</h4>
+        <form action="{{URL('/order-place')}}" method="post">
+            {{csrf_field()}}
+			<div class="payment-options">
+					<span>
+						<label><input name="payment_option" value="1" type="checkbox"> Thanh Toán Thẻ ATM</label>
+					</span>
+					<span>
+						<label><input name="payment_option" value="2" type="checkbox"> Thanh Toán Khi Nhận Hàng</label>
+					</span>
+					<span>
+						<label><input name="payment_option" value="3" type="checkbox"> Thanh Toán bằng thẻ visa</label>
+
+					</span>
+					<input type="submit" name="send_order_place" value="Đặt hàng" class="btn btn-primary btn-sm">
 				</div>
-			</div>
+                </form>
 		</div>
-	</section><!--/#do_action-->
+	</section> <!--/#cart_items-->
 		</div>
 	</section> <!--/#cart_items-->
 
+	
 @endsection

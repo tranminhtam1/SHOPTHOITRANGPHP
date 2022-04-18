@@ -4,7 +4,7 @@
             <div class="col-lg-12">
                     <section class="panel">
                         <header class="panel-heading">
-                            Them danh muc san pham
+                           Thêm danh mục sản phẩm 
                         </header>
                         <div class="panel-body">
                             <?php
@@ -20,15 +20,15 @@
                                     {{ csrf_field()}}
                               
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Ten danh muc</label>
+                                    <label for="exampleInputPassword1">Tên danh mục </label>
                                     <input type="text" name="category_product_name" class="form-control"  id="exampleInputPassword1" placeholder="Ten danh muc">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Mo ta danh muc</label>
+                                    <label for="exampleInputPassword1">Mô tả danh mục </label>
                                     <textarea class="form-control" style="resize: none" rows="5" name="category_product_desc" id="exampleInputPassword1" placeholder="Mo ta danh muc"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputFile">Hien thi </label>
+                                    <label for="exampleInputFile">Hiển thị  </label>
                                     <select name="category_product_status" class="form-control input-sm m-bot15">
                                         <option value="0">An</option>
                                          <option value="1">Hien</option>                                       
